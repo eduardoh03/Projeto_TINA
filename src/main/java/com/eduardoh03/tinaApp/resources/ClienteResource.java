@@ -47,6 +47,7 @@ public class ClienteResource {
 		return ResponseEntity.noContent().build();
 	}
 
+	//TODO implementar o insert Cliente
 	
 	
 	
