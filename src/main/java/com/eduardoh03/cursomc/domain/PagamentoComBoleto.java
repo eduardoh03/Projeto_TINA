@@ -4,7 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 
-import com.eduardoh03.cursomc.domaine.enums.EstadoPagamento;
+import com.eduardoh03.cursomc.domain.enums.EstadoPagamento;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity

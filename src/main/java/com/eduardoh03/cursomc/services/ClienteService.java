@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import com.eduardoh03.cursomc.domain.Cidade;
 import com.eduardoh03.cursomc.domain.Cliente;
 import com.eduardoh03.cursomc.domain.Endereco;
-import com.eduardoh03.cursomc.domaine.enums.TipoCliente;
+import com.eduardoh03.cursomc.domain.enums.TipoCliente;
 import com.eduardoh03.cursomc.dto.ClienteDTO;
 import com.eduardoh03.cursomc.dto.ClienteNewDTO;
 import com.eduardoh03.cursomc.repositories.ClienteRepository;

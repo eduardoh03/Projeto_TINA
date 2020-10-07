@@ -2,7 +2,7 @@ package com.eduardoh03.cursomc.domain;
 
 import javax.persistence.Entity;
 
-import com.eduardoh03.cursomc.domaine.enums.EstadoPagamento;
+import com.eduardoh03.cursomc.domain.enums.EstadoPagamento;
 
 @Entity
 public class PagamentoComCartao extends Pagamento{

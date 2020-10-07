@@ -1,4 +1,4 @@
-package com.eduardoh03.cursomc.domaine.enums;
+package com.eduardoh03.cursomc.domain.enums;
 
 public enum EstadoPagamento {
 	PENDENTE(1,"Pendente"),
