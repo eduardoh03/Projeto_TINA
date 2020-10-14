@@ -45,12 +45,11 @@ public class ClienteResource {
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Void> dalete(@PathVariable Integer id){
+	public ResponseEntity<Void> delete(@PathVariable Integer id){
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
 
-	//TODO implementar	 o insert Cliente
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody ClienteNewDTO objDto){
 		Cliente obj = service.fromDTO(objDto);
