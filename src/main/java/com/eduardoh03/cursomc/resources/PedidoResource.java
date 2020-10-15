@@ -23,10 +23,10 @@ public class PedidoResource {
 	@Autowired
 	private PedidoService service;
 	
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Pedido> find(@PathVariable Integer id) {
-		Pedido obj = service.find(id);				
-		return ResponseEntity.ok(obj);
+		Pedido obj = service.find(id);
+		return ResponseEntity.ok().body(obj);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)

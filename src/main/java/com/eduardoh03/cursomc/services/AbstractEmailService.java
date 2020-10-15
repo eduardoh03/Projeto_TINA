@@ -7,11 +7,11 @@ import org.springframework.mail.SimpleMailMessage;
 
 import com.eduardoh03.cursomc.domain.Pedido;
 
-public abstract class AbstractEmailService implements EmailService{
+public abstract class AbstractEmailService implements EmailService {
 	
 	@Value("${default.sender}")
 	private String sender;
-
+	
 	@Override
 	public void sendOrderConfirmationEmail(Pedido obj) {
 		SimpleMailMessage sm = prepareSimpleMailMessageFromPedido(obj);

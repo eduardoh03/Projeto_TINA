@@ -21,11 +21,8 @@ import com.eduardoh03.cursomc.services.exceptions.ObjectNotFoundException;
 public class PedidoService {
 	
 	@Autowired
-	private ClienteService clienteService;
-	
-	@Autowired
 	private PedidoRepository repo;
-
+	
 	@Autowired
 	private BoletoService boletoService;
 	
@@ -39,14 +36,16 @@ public class PedidoService {
 	private ProdutoService produtoService;
 	
 	@Autowired
+	private ClienteService clienteService;
+	
+	@Autowired
 	private EmailService emailService;
 	
 	public Pedido find(Integer id) {
 		Optional<Pedido> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
-						"Objeto não encontrado! Id: " + id + ", Tipo: " + Pedido.class.getName()));
-		}
-	
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Pedido.class.getName()));
+	}
 	@Transactional
 	public Pedido insert(Pedido obj) {
 		obj.setId(null);
@@ -70,4 +69,4 @@ public class PedidoService {
 		emailService.sendOrderConfirmationEmail(obj);
 		return obj;
 	}
-}
+	}
