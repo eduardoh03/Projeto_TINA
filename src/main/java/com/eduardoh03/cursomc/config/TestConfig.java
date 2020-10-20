@@ -14,8 +14,10 @@ import com.eduardoh03.cursomc.services.MockEmailService;
 @Configuration
 @Profile("test")
 public class TestConfig {
+
 	@Autowired
 	private DBService dbService;
+	
 	@Bean
 	public boolean instantiateDatabase() throws ParseException {
 		dbService.instantiateTestDatabase();
